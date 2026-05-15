@@ -18,12 +18,12 @@ import { toast } from 'sonner';
 
 // Sample Product Data
 const products = [
-  { id: '1', name: 'Heavy Duty Paper Plates', specs: '9-inch, 100 pack', image: '/heavy-duty.jpg' },
-  { id: '2', name: 'Clear Plastic Cups', specs: '16oz, 50 pack', image: '/clear-plastic-cups.jpg' },
-  { id: '3', name: 'Aluminum Foil Roll', specs: '18-inch x 500 ft, Heavy Duty', image: '/aluminium-foil.jpg' },
-  { id: '4', name: 'Eco-Friendly Takeout Containers', specs: '3-Compartment, 150 pack', image: '/eco-friendly.jpg' },
-  { id: '5', name: 'Premium Napkins', specs: 'White, 2-ply, 500 pack', image: '/napkin.jpg' },
-  { id: '6', name: 'Silverware Combo Set', specs: 'Forks, Knives, Spoons, 300 pack', image: '/silverware.jpg' },
+  { id: '1', name: 'Heavy Duty Paper Plates', specs: '9-inch, 100 pack', image: `${import.meta.env.BASE_URL}heavy-duty.jpg` },
+  { id: '2', name: 'Clear Plastic Cups', specs: '16oz, 50 pack', image: `${import.meta.env.BASE_URL}clear-plastic-cups.jpg` },
+  { id: '3', name: 'Aluminum Foil Roll', specs: '18-inch x 500 ft, Heavy Duty', image: `${import.meta.env.BASE_URL}aluminium-foil.jpg` },
+  { id: '4', name: 'Eco-Friendly Takeout Containers', specs: '3-Compartment, 150 pack', image: `${import.meta.env.BASE_URL}eco-friendly.jpg` },
+  { id: '5', name: 'Premium Napkins', specs: 'White, 2-ply, 500 pack', image: `${import.meta.env.BASE_URL}napkin.jpg` },
+  { id: '6', name: 'Silverware Combo Set', specs: 'Forks, Knives, Spoons, 300 pack', image: `${import.meta.env.BASE_URL}silverware.jpg` },
 ];
 
 export default function App() {
@@ -245,7 +245,7 @@ export default function App() {
             <div className="relative order-first md:order-last mb-12 md:mb-0">
                <div className="absolute inset-0 bg-[#E02424] transform translate-x-4 translate-y-4 rounded-xl"></div>
                <img 
-                 src="/aluminium-foil.jpg?auto=compress&cs=tinysrgb&w=800" 
+                 src={`${import.meta.env.BASE_URL}aluminium-foil.jpg`}
                  alt="Stack of restaurant takeout containers" 
                  className="relative z-10 w-full object-cover aspect-[4/3] rounded-xl shadow-lg transition-all duration-500 hover:-translate-y-1 hover:-translate-x-1" 
                />
@@ -331,7 +331,7 @@ export default function App() {
                 <div className="hidden md:flex flex-col gap-4">
                    <div className="bg-gray-800 aspect-video border-2 border-gray-600 relative overflow-hidden group">
                      <img 
-                      src="/logistics.jpg?auto=format&fit=crop&q=80&w=800" 
+                      src={`${import.meta.env.BASE_URL}logistics.jpg`}
                       alt="Delivery box" 
                       className="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:mix-blend-normal group-hover:grayscale-0 transition-all duration-700"
                      />
@@ -348,16 +348,16 @@ export default function App() {
             <h2 className="text-4xl font-black uppercase tracking-tight mb-12 text-[#1A1A1A] border-b-4 border-black inline-block pb-2">Products in Action</h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
               <div className="aspect-[4/3] border border-gray-200 relative overflow-hidden bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/heavy-duty.jpg" alt="BBQ Event" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
+                <img src={`${import.meta.env.BASE_URL}heavy-duty.jpg`} alt="BBQ Event" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
               </div>
               <div className="aspect-[4/3] border border-gray-200 relative overflow-hidden bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/napkin.jpg" alt="Takeout food" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
+                <img src={`${import.meta.env.BASE_URL}napkin.jpg`} alt="Takeout food" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
               </div>
               <div className="aspect-[4/3] border border-gray-200 relative overflow-hidden bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/clear-plastic-cups.jpg" alt="Restaurant setting" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
+                <img src={`${import.meta.env.BASE_URL}clear-plastic-cups.jpg`} alt="Restaurant setting" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
               </div>
               <div className="aspect-[4/3] border border-gray-200 relative overflow-hidden bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <img src="/product-four.jpg" alt="Catering tray" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
+                <img src={`${import.meta.env.BASE_URL}product-four.jpg`} alt="Catering tray" className="w-full h-full object-cover hover:scale-105 transition-all duration-500" />
               </div>
             </div>
 
